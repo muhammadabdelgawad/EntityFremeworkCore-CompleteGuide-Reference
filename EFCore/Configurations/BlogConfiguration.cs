@@ -47,9 +47,18 @@ namespace EFCore.Configurations
 
             #region Set Composite Key Using Fluent API
 
-            builder.HasKey(b => new { b.Id, b.Url });
+            //builder.HasKey(b => new { b.Id, b.Url });
 
             #endregion
+
+            #region Set Default Value & HasDefaultValueSql  Using Fluent API
+           
+            // builder.Property(b => b.Rating).HasDefaultValue(3).HasDefaultValueSql("GETDATE()");
+
+            #endregion
+
+
+
 
         }
     }
