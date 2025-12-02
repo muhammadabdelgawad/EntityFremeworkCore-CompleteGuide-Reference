@@ -53,8 +53,13 @@ namespace EFCore
             //                                 .HasComputedColumnSql("[FirstName] + ' ' + [LastName]");
             #endregion
 
+            #region another way to configure the primary key with identity using Fluent API
+           
+            //modelBuilder.Entity<Category>()
+            //             .Property(c => c.Id)
+            //             .ValueGeneratedOnAdd();
 
-
+            #endregion
 
 
 
