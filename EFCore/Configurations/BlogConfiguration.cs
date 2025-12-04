@@ -66,6 +66,16 @@ namespace EFCore.Configurations
 
             #endregion
 
+
+            #region Configure One-To-Many Relationship Between Blog and Post Using Fluent API
+
+            //builder.HasMany(b => b.Posts)
+            //       .WithOne();
+
+
+            #endregion
+
+
         }
     }
 }

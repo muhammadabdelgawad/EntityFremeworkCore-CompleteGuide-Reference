@@ -54,14 +54,39 @@ namespace EFCore
             #endregion
 
             #region another way to configure the primary Default Value if isnot int value key with identity using Fluent API
-           
+
             //modelBuilder.Entity<Category>()
             //             .Property(c => c.Id)
             //             .ValueGeneratedOnAdd();
 
             #endregion
 
+            #region Configure One-To-Many Relationship 
 
+            //************************* First Way *********************************************
+            //Between Blog and Post Using Fluent API
+
+            //modelBuilder.Entity<Post>()
+            //            .HasOne(p => p.Blog)     // Each Post has one Blog
+            //            .WithMany(b => b.Posts); // Each Blog has many Posts
+
+            //************************* Another Way *********************************************
+            /// Another Way If Navigation Property is Missing
+            // modelBuilder.Entity<Post>().HasOne<Blog>()
+            //             .WithMany()
+            //             .HasForeignKey(p => p.Blog)
+            //             .HasConstraintName("FK_Posts_Test"); // To specify custom foreign key Name 
+
+
+            //************************* Between Car and RecordOfSale Using Fluent API *********************************************
+
+            //modelBuilder.Entity<RecordOfSale>()
+            //            .HasOne(s=>s.Car)
+            //            .WithMany(c=>c.SaleHistory)
+            //            .HasForeignKey(s=>s.CarLicensePlate) 
+            //            .HasPrincipalKey(c=>c.LicensePlate);
+
+            #endregion
 
 
 
@@ -69,6 +94,7 @@ namespace EFCore
         /// -- Add DbSet for Each Entity
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogImage> BlogImages { get; set; }
         public DbSet<AuditEntry> AuditEntries { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Book> Books { get; set; }
