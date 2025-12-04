@@ -8,6 +8,12 @@ namespace EFCore.Models
 
     /// -- Change Table Name & Schema Using Data Annotations
    // [Table("AuditEntriesForTest", Schema = "TestNewSchema")]
+
+    /// -- Create Index on Column Using Data Annotations
+    //[Index(nameof(Username))]
+
+    ///-- Or you can create a Composite Index
+    //[Index(nameof(Username), nameof(Action))] 
     public class AuditEntry
     {
         public int Id { get; set; }

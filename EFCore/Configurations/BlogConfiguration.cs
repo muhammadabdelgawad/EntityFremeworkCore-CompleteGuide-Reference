@@ -75,6 +75,19 @@ namespace EFCore.Configurations
 
             #endregion
 
+            #region  Create Index on Url column Using Fluent API
+
+            // builder.HasIndex(b => b.Url); 
+           // builder.HasIndex(b => new { b.Url, b.Rating }); // Composite Index
+
+            #endregion
+
+
+
+
+
+
+
 
         }
     }
