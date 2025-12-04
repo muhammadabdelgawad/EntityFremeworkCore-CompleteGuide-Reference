@@ -9,5 +9,7 @@
 
         // EF Core Will Create A Foreign Key  BlogId Automatically -- Shadow Property
         public Blog Blog { get; set; }
+
+       
     }
 }

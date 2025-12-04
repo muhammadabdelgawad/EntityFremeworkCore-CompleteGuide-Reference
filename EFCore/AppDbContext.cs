@@ -88,7 +88,34 @@ namespace EFCore
 
             #endregion
 
+            #region Configure Many-To-Many Relationship Manually "To Create New Table"
 
+            //modelBuilder.Entity<Story>()
+            //    .HasMany(s => s.Tags)
+            //    .WithMany(t => t.Stories)
+            //    .UsingEntity(x => x.ToTable("StoryTagTest"));
+
+
+            /// -- Configure many-to-many RelationShip with Creat Third Table Manually
+            //modelBuilder.Entity<Story>()
+            //    .HasMany(s => s.Tags)
+            //    .WithMany(t => t.Stories)
+            //    .UsingEntity<StoryTag>(
+            //    x => x.HasOne(st => st.Tag)
+            //         .WithMany(t => t.StoryTags)
+            //         .HasForeignKey(st => st.TagId),
+
+            //    x => x.HasOne(st => st.Story)
+            //         .WithMany(s => s.StoryTags)
+            //         .HasForeignKey(st => st.StoryId),
+            //    x =>
+            //    {
+            //        x.Property(st => st.AddedOn).HasDefaultValueSql("GETDATE()");
+            //        x.HasKey(s=> new { s.TagId ,s.StoryId});
+            //    }
+            //   );
+
+            #endregion
 
         }
         /// -- Add DbSet for Each Entity
@@ -100,6 +127,7 @@ namespace EFCore
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
     }
 }
