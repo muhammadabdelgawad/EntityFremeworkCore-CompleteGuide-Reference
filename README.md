@@ -15,14 +15,14 @@ Currently, this repository contains a minimal "Hello, World!" console applicatio
 
 ## Technology Stack
 
-*   .NET (Target framework will be specified in future updates)
-*   Entity Framework Core (Version will be specified in future updates)
+*   .NET Core 10
 *   C#
+*   Entity Framework Core 10
 
 ## Prerequisites
 
-*   .NET SDK installed.  You can download it from [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).
-*   A suitable IDE or text editor (e.g., Visual Studio, Visual Studio Code).
+*   .NET 10 SDK installed.  You can download it from [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download).
+*   A suitable IDE or text editor (Visual Studio, Visual Studio Code).
 
 ## Installation Instructions
 
@@ -74,13 +74,3 @@ Contributions are welcome!  Please follow these guidelines:
 
 Please ensure your code adheres to the existing coding style and includes appropriate unit tests.
 
-## License Information
-
-License information will be added in future updates when the project contains more significant content. Currently, no specific license is applied. All rights are reserved by the owner of this repository.
-
-## Contact/Support Information
-
-For questions or support, please contact:
-
-Muhammad Abdel Gawad
-muhammad.abdelgawad.dev@gmail.com
