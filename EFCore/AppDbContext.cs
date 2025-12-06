@@ -7,7 +7,7 @@ namespace EFCore
     public class AppDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlServer(@"Server = MUHAMMAD\SQLEXPRESS;Database=EFCore;Trusted_Connection=True;TrustServerCertificate=True;");
+            => optionsBuilder.UseLazyLoadingProxies().UseSqlServer(@"Server = MUHAMMAD\SQLEXPRESS;Database=EFCore;Trusted_Connection=True;TrustServerCertificate=True;"); // Add your connection string here and enable Lazy Loading Proxies    
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

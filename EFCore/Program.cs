@@ -126,11 +126,47 @@ var _dbContext = new AppDbContext();
 
 #endregion
 
+#region Eager Loading - Include Method 
+/// - Not Best Practice - Fetch Related Data Separately (Multiple Queries) - Low Performance
 
 
+//var book = _dbContext.Books.Include(b => b.Author).FirstOrDefault(b => b.Id == 1);
+//Console.WriteLine($"Book Name: {book!.Name}");
 
+/// -- ThenInclude for Nested Related Data
+//var book = _dbContext.Books.Include(b => b.Author).ThenInclude(b=> b.test).FirstOrDefault(b => b.Id == 1);
+//Console.WriteLine($"Book Name: {book!.Name.test}");
 
+#endregion
 
+#region Explicit Loading - Reference(), Load() Methods
+
+/// -- Load Related Data Explicitly - Better Performance (Single Query)
+/// 
+//var book = _dbContext.Books.FirstOrDefault(b => b.Id == 1);
+//_dbContext.Entry(book!).Reference(b => b.Author).Load();   // Load Related Data Explicitly Navigation Property Not Collection
+//Console.WriteLine($"Book Name: {book!.Author.Name}");
+
+//var blog = _dbContext.Blogs.FirstOrDefault(b => b.Id == 1);
+//_dbContext.Entry(blog!).Collection(b => b.Posts).Load();     // Load Related Data Explicitly Collection "Posts"
+
+//foreach (var post in blog.Posts)
+//{
+//    Console.WriteLine($"Post Title: {post.Title}");
+//}
+
+#endregion
+
+#region Lazy Loading - Virtual Navigation Properties
+
+/// -- First You Need to Install "Microsoft.EntityFrameworkCore.Proxies" Package
+/// -- Enable Lazy Loading Proxies in AppDbContext Options
+/// -- Make Navigation Properties "Virtual" in Your Entities
+
+//var book = _dbContext.Books.Single(b => b.Id == 1); 
+//Console.WriteLine($"Book Name: {book!.Author.Name}");
+
+#endregion
 
 
 
