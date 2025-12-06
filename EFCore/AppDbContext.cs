@@ -2,12 +2,15 @@
 using EFCore.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 namespace EFCore
 {
     public class AppDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseLazyLoadingProxies().UseSqlServer(@"Server = MUHAMMAD\SQLEXPRESS;Database=EFCore;Trusted_Connection=True;TrustServerCertificate=True;"); // Add your connection string here and enable Lazy Loading Proxies    
+            => optionsBuilder.UseLazyLoadingProxies() //  Enable Lazy Loading Proxies  
+            .UseSqlServer(@"Server = MUHAMMAD\SQLEXPRESS;Database=EFCore;Trusted_Connection=True;TrustServerCertificate=True;", // Add your connection string here 
+              o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)); // Enable SplitQuery for all queries "Make It Default Behavior for EF Core"  
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -139,22 +142,8 @@ namespace EFCore
             #endregion
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-        /// -- Add DbSet for Each Entity
+        /// -- Add DbSet for Each Entity 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }

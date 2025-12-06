@@ -168,7 +168,13 @@ var _dbContext = new AppDbContext();
 
 #endregion
 
+#region SplitQuery
+/// -- Efficient for complex includes
+/// -- Loads each included relationship using separate SQL queries.
+/// -- Use AsSplitQuery to split the query into multiple queries for better performance with large related data
+//var blogd = _dbContext.Blogs.Include(b => b.Posts).AsSplitQuery().ToList(); 
 
+#endregion
 
 
 
