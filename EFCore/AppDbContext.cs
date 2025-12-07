@@ -141,9 +141,14 @@ namespace EFCore
 
             #endregion
 
+            #region Global Query Filter
+
+            modelBuilder.Entity<Order>().HasQueryFilter(o => !o.IsDeleted); // Global Query Filter to Exclude Soft Deleted Records
+
+            #endregion      
 
         }
-        /// -- Add DbSet for Each Entity 
+            /// -- Add DbSet for Each Entity 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }

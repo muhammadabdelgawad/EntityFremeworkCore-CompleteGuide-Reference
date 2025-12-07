@@ -189,3 +189,13 @@ var _dbContext = new AppDbContext();
 
 
 #endregion
+
+#region Global Query Filter
+// Display Orders with IsDeleted Column Using Global Query Filter
+
+//var orders = _dbContext.Orders.ToList();
+//foreach (var order in orders)
+//{
+//	Console.WriteLine($"Id: {order.Id}, OrderNo: {order.OrderNo}, Amount: {order.Amount}, IsDeleted: {order.IsDeleted}");
+//} 
+#endregion
