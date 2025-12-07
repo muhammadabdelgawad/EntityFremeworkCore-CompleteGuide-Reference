@@ -176,5 +176,16 @@ var _dbContext = new AppDbContext();
 
 #endregion
 
+#region  Execute Stored Procedure
+
+//var bookId = 1;
+
+//var books = _dbContext.Books.FromSqlRaw($"prc_GetBookById {bookId}").ToList(); // Execute Stored Procedure to get Book by Id
+
+//foreach (var book in books)
+//{
+//	Console.WriteLine($"Book Id: {book.Id}, Book Name: {book.Name}");
+//}
 
 
+#endregion
