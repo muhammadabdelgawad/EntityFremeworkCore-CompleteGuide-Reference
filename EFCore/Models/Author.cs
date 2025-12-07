@@ -14,5 +14,9 @@ namespace EFCore.Models
 
         [Required, MaxLength(100)]
         public string DisplayName { get; set; }
+
+        public Nationality? Nationality { get; set; }
+
+        public int? NationalityId { get; set; }
     }
 }

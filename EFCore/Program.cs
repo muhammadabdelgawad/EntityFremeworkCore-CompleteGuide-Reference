@@ -199,3 +199,40 @@ var _dbContext = new AppDbContext();
 //	Console.WriteLine($"Id: {order.Id}, OrderNo: {order.OrderNo}, Amount: {order.Amount}, IsDeleted: {order.IsDeleted}");
 //} 
 #endregion
+
+#region Add Opertaion - New Record Database
+
+/// -- Add National And Save to Database
+
+//var nationality = new Nationality { Name = "Egyptian" };
+//_dbContext.Nationalities.Add(nationality);  // Add National To DbSet
+//_dbContext.SaveChanges(); // Save Changes to Database 
+
+/// --Add Multiple Nationalities to Database
+
+//var nationalities = new List<Nationality>
+//{
+//    new Nationality { Name = "Spanish" },
+//    new Nationality { Name = "Indian" },
+//    new Nationality { Name = "Chinese" },
+//    new Nationality { Name = "Nigerian" },
+//    new Nationality { Name = "Turkish"}
+//};
+//_dbContext.Nationalities.AddRange(nationalities); // Add Multiple Nationalities to DbSet
+//_dbContext.SaveChanges(); // Save Changes to Database
+
+/// -- Add Author with Existing National
+
+//var author = new Author
+//{
+//    FirstName = "John",
+//    LastName = "Doe" ,
+//    Nationality =  new Nationality { Name "Russian" } // Add New Nationality while Adding Author 
+//};
+
+//_dbContext.Authors.Add(author); // Add Author to DbSet
+//_dbContext.SaveChanges(); // Save Changes to Database
+
+
+#endregion
+

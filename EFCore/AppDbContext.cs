@@ -160,5 +160,6 @@ namespace EFCore
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Stock> Stocks { get; set; }
+        public DbSet<Nationality> Nationalities { get; set; }
     }
 }
