@@ -42,7 +42,20 @@ Perfect for developers looking to:
 - 🌱 **Data Seeding** - Initial data population
 - 📊 **Computed Columns** - Database-calculated values
 - 🔢 **Sequences** - Database sequence generation
+## 📊 Database Schema
 
+The project includes these main entities:
+
+| Entity | Description | Key Features |
+|--------|-------------|--------------|
+| **Blog** | Blog posts system | One-to-Many with Posts |
+| **Post** | Individual blog posts | Foreign key to Blog |
+| **Author** | Book authors | One-to-Many with Books |
+| **Book** | Books collection | Foreign key to Author |
+| **Stock** | Market stock data | Grouping examples |
+| **Order** | Orders with soft delete | Global query filter, Sequence |
+| **Nationality** | Reference data | Used by Authors |
+| **Story/Tag** | Content tagging | Many-to-Many relationship |
 ## 🛠️ Technology Stack
 
 - **.NET 10** - Latest .NET framework
