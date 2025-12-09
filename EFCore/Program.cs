@@ -236,3 +236,43 @@ var _dbContext = new AppDbContext();
 
 #endregion
 
+#region Update Operation - Existing Record Database
+
+/// -- Update Existing National Name - Using Find Method  -First Way
+
+//var nationatlity = _dbContext.Nationalities.Find(1);
+//nationatlity!.Name = "TestUpdate1";
+//_dbContext.SaveChanges();
+
+/// -- Update Existing National Name - Using Update Method by Creating New Object  -Second Way
+
+//var nationatlity = new Nationality { Id = 1, Name = "TestUpdate2" };
+//_dbContext.Nationalities.Update(nationatlity); 
+//_dbContext.SaveChanges();
+
+/// -- Update Existing National Name - Using Entry & CurrentValues.SetValues Method -Third Way
+
+//var currentNationality = _dbContext.Nationalities.Find(1);
+//var newNationality = new Nationality { Id = 1, Name = "Testv3" };
+//_dbContext.Entry(currentNationality!).CurrentValues.SetValues(newNationality);
+//_dbContext.SaveChanges();
+
+/// -- Update Existing National Name - Using Entry & Property Method if some columns i dont want to update it - Fourth Way
+//var order = new Order { Id = 1,OrderNo= 9, Amount = 5000  };
+
+//_dbContext.Orders.Update(order);
+//_dbContext.Entry(order).Property(o => o.OrderNo).IsModified = false; // Exclude OrderNo Property from Update
+//_dbContext.Entry(order).Property(o => o.IsDeleted).IsModified = false; // Exclude IsDeleted Property from Update
+//_dbContext.SaveChanges();
+
+///-- Update Multiple Orders - Using UpdateRange Method - Fifth Way
+//var orders = _dbContext.Orders.Where(o => !o.IsDeleted).ToList();
+//foreach (var order in orders)
+//{
+//    order.IsDeleted = true; // Mark as deleted
+//}
+//_dbContext.UpdateRange(orders);
+//_dbContext.SaveChanges();
+
+#endregion
+
