@@ -38,12 +38,18 @@ Perfect for developers looking to:
 
 ### Advanced Features
 - 🎯 **Query Optimization** - NoTracking, SplitQuery, and performance tuning
-- 🔄 **Transaction Management** - ACID compliance with savepoints
 - 🗃️ **Stored Procedures** - Integration with database procedures
 - 🛡️ **Global Query Filters** - Soft delete implementation
-- 🌱 **Data Seeding** - Initial data population
 - 📊 **Computed Columns** - Database-calculated values
 - 🔢 **Sequences** - Database sequence generation
+- 🔐 **Transaction management** with savepoints
+- 🗑️ **Soft delete** with global query filters
+- 🌱 **Data seeding strategies**
+- 📊 **Computed columns and sequences**
+- 🔧 **Fluent API configuration**
+- 📋 **Migration management**
+
+
 ## 📊 Database Schema
 
 The project includes these main entities:
@@ -74,49 +80,4 @@ Before you begin, ensure you have the following installed:
 - [Visual Studio 2026](https://visualstudio.microsoft.com/) (recommended) or [Visual Studio Code](https://code.visualstudio.com/)
 - [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) (optional)
 
-## Installation Instructions
 
-1.  Clone the repository:
-
-    ```bash
-    git clone https://github.com/muhammadabdelgawad/EntityFremeworkCore-StudyNotes.git
-    ```
-
-2.  Navigate to the project directory:
-
-    ```bash
-    cd EntityFremeworkCore-StudyNotes/EFCore
-    ```
-
-## Usage Guide
-
-Currently, the application is a simple "Hello, World!" console application.
-
-1.  Navigate to the `EFCore` directory.
-2.  Run the application using the .NET CLI:
-
-    ```bash
-    dotnet run
-    ```
-
-    This will output "Hello, World!" to the console. Press Enter to exit.
-
-Future examples will demonstrate more complex EF Core functionality.  Refer to the specific example's README for detailed usage instructions.
-
-
-## Contributing Guidelines
-
-Contributions are welcome!  Please follow these guidelines:
-
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix:
-
-    ```bash
-    git checkout -b feature/your-feature-name
-    ```
-
-3.  Make your changes and commit them with descriptive messages.
-4.  Push your branch to your forked repository.
-5.  Submit a pull request to the `master` branch of the original repository.
-
-Please ensure your code adheres to the existing coding style and includes appropriate unit tests.
