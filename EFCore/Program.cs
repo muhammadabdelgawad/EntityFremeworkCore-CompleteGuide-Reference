@@ -276,3 +276,18 @@ var _dbContext = new AppDbContext();
 
 #endregion
 
+#region Delete Operation - Existing Record Database
+
+///-- Delete Nationality - Using Remove Method  - First Way
+
+//var nationalities = _dbContext.Nationalities.Find(1);
+//_dbContext.Nationalities.Remove(nationalities!);
+//_dbContext.SaveChanges();
+
+/// Delete Multiple Nationalities - Using RemoveRange Method - Second Way 
+
+//var nationalities = _dbContext.Nationalities.Where(n => n.Id > 11 && n.Id < 15).ToList();
+//_dbContext.Nationalities.RemoveRange(nationalities); 
+//_dbContext.SaveChanges();
+
+#endregion
