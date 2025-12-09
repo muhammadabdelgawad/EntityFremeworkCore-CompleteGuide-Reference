@@ -153,7 +153,7 @@ namespace EFCore
             #endregion
 
         }
-            /// -- Add DbSet for Each Entity 
+        /// -- Add DbSet for Each Entity to map to a Tables in the Database
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }

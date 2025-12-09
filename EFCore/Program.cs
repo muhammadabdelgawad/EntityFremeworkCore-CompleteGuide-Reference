@@ -383,9 +383,20 @@ var _dbContext = new AppDbContext();
 //}
 #endregion
 
+#region Bulk Update & Delete Operations 
+/// -- Bulk Delete ExecuteDelete Method
+
+//_dbContext.Stocks.ExecuteDelete(); // Bulk Delete All Data From Stocks 
+
+//_dbContext.Stocks.Skip(100).ExecuteDelete(); // Bulk Delete Stocks 
+
+//_dbContext.Stocks.Where(s=> s.Id > 90).ExecuteDelete(); // Bulk Delete Stocks with Condition
 
 
+/// -- Bulk Update ExecuteUpdate Method
 
+//_dbContext.Stocks.Take(10).ExecuteUpdate(s => s.SetProperty(x=> x.Name, x=>x.Name + " updated"));
+#endregion
 
 
 
